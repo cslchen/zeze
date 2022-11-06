@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inputNull(form)
+    {
+        for(i=0;i<form.length;i++)
+        {
+            
+            if(form.elements[i].value=="")	
+            {
+               
+                alert("亲："+form.elements[i].placeholder+"不能为空");
+                form.elements[i].focus();	
+                return   false;
+           }
+        }	
+        
+       
+
+    }
+    </script>
+</head>
+<body>
+    <form action="" onSubmit="return inputNull(this)">
+        <table>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" placeholder="姓名"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="text" placeholder="密码"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td >
+                    <input type="radio" checked="checked"  name="sex">男
+                    <input type="radio"  name="sex">女
+                </td>
+            </tr>
+            <tr>
+                <td>血型：</td>
+                <td>
+                    <input type="radio"  checked="checked" name="a">O
+                    <input type="radio"  name="a">A
+                    <input type="radio"  name="a">B
+                    <input type="radio"  name="a">AB
+                </td>
+            </tr>
+            <tr>
+                <td>性格：</td>
+                <td  >
+                    <input type="checkbox" name="ha"  placeholder="性格" >热情大方
+                    <input type="checkbox" name="ha"   placeholder="性格"> 温柔体贴
+                    <input type="checkbox" name="ha"  placeholder="性格">多愁善感
+                </td>
+            </tr>
+            <tr>
+                <td>文件：</td>
+                <td><input type="file" value="none" placeholder="文件" ></td>
+            </tr>
+            <tr>
+                <td>简介：</td>
+                <td><textarea cols="21" rows="5" placeholder="简介" ></textarea></td>
+            </tr>
+            <tr>
+                <td>城市：</td>
+                <td><select name="" id="">
+                    <option value="none">---</option>
+                    <option>沈阳</option>
+                    <option >上海</option>
+                    <option>深圳</option>
+                    <option>天津</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="提交"></td>
+                <td><input type="submit" value="重置"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
