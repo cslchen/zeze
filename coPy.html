@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+</head>
+<body>
+	<input type="text" id="content" value="你好">
+	<input type="button" value="复制" onclick="Copy()">
+    <input type="text" id="wu" value="">
+</body>
+<script>
+function Copy(){
+	var e=document.getElementById("content");//对象是content
+	if (e.value != "") {
+		e.select();//选择对象
+		document.execCommand("Copy");//执行浏览器复制命令
+        wu.value= document.getElementById("content").value
+		alert("复制成功！");
+        
+	}else{
+		alert("文本框不能为空！");
+	}
+}
+
+</script>
+</html>
