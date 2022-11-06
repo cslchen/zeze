@@ -1,0 +1,53 @@
+<!-- 完美版 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 400px;
+            height: 400px;
+        }
+     input{
+        margin-right: 200px;
+     }
+    </style>
+<script>
+    function inputNull(form)
+    {
+        for(i=0;i<form.length;i++)
+        {
+            if(form.elements[i].value=="")	
+            {
+                alert("亲："+form.elements[i].placeholder+"不能为空");
+                form.elements[i].focus();	
+                return   false;
+           }
+        }	
+        if(form.elements[1].value.length<6 ){
+        alert("密码长度不能小于6");
+        return false;
+        }
+        if(form.elements[1].value != form.elements[2].value){
+            alert("密码不一致")
+        return false;
+
+        }
+    }
+    </script>
+    </head>
+    <body>
+    <form action="testlogin.php" method="post" onSubmit="return inputNull(this)" id="csl">
+    用户名：<input type="text" placeholder="用户名" name="userName" id="userName">  
+    <br>
+    密码：<input type="password" placeholder="密码" name="password" id="password">	
+    <br>
+    确定密码：<input type="password" placeholder="确定密码" name="password1" id="password1">	
+    <br>
+    <a id="btn_register" href="#"><input type="submit" value="注册"></a>
+    </form>
+</body>
+</html>
