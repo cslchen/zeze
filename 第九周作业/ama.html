@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style> 
+		#a{
+			width: 400px;
+			height: 400px;
+			border: 1px solid ;
+			border-radius: 1em;
+			
+		}
+		.b{
+			margin:0 auto;
+			width: 300px;
+			height: 300px;
+			border: 1px dashed ;
+			border-radius: 1em;
+		}
+		.c{
+			margin:0 auto;
+			margin-top: 60px;
+			width: 180px;
+			height: 180px;
+			border: 1px solid ;
+			border-radius: 1em;
+		}
+		.car
+		{
+			width:50px;
+			height:50px;
+			
+			background-image:url(car.png);
+			background-size:50px ;
+			position:relative;
+			animation-name:myfirst;
+			animation-duration:5s;
+			animation-timing-function:linear;
+			animation-delay:2s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+			animation-play-state:running;
+			/* Safari and Chrome: */
+			-webkit-animation-name:myfirst;
+			-webkit-animation-duration:5s;
+			-webkit-animation-timing-function:linear;
+			-webkit-animation-delay:2s;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-direction:alternate;
+			-webkit-animation-play-state:running;
+		}
+		
+		@keyframes myfirst
+		{
+			
+			0%   {background-image:url(car.png); left:1em; top:1em;}
+			25%  {background-image:url(car.png); left:330px; top:1em;}
+			50%  {background-image:url(car.png); left:330px; top:310px;}
+			75%  {background-image:url(car.png)a; left:1em; top:310px;}
+			100% {background-image:url(car.png); left:1em; top:1em;}
+		}
+		
+		@-webkit-keyframes myfirst /* Safari and Chrome */
+		{
+			
+			0%   {background-image:url(car.png); left:1em; top:1em;}
+			25%  {background-image:url(car.png); left:330px; top:1em;}
+			50%  {background-image:url(car.png); left:330px; top:310px;}
+			75%  {background-image:url(car.png); left:1em; top:310px;}
+			100% {background-image:url(car.png); left:1em; top:1em;}
+		}
+		</style>
+	</head>
+	<body>
+	<div id="a">
+		<div class="car">
+			
+		</div>
+		
+		<div class="b">
+			<div class="c"></div>
+		</div>
+		
+	</div>
+	</body>
+</html>
